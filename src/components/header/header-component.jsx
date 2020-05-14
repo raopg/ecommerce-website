@@ -11,7 +11,7 @@ import { selectCurrentUser } from '../../redux/user/user.selector';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
-import { HeaderContainer, LogoContainer, OptionsContainer, OptionDiv, OptionLink } from './header.styles';
+import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink } from './header.styles';
 
 const Header = ({currentUser, hidden}) => (
     <HeaderContainer>
@@ -23,7 +23,7 @@ const Header = ({currentUser, hidden}) => (
             <OptionLink className='option' to='/shop'>CONTACT</OptionLink>
             {
                 currentUser ?
-                <OptionDiv className='option' onClick={() => auth.signOut()}>SIGN OUT</OptionDiv>
+                <OptionLink as='div' className='option' onClick={() => auth.signOut()}>SIGN OUT</OptionLink>
                 :
                 <OptionLink className='option' to='/signin'>SIGN IN</OptionLink>
             }
