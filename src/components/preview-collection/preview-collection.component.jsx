@@ -6,7 +6,10 @@ import { PreviewCollectionContainer, PreviewContainer, TitleContainer } from './
 
 //import './preview-component.styles.scss';
 
-const PreviewCollection = ({ title, items }) => (
+const PreviewCollection = ({ title, items }) => {
+    //console.log(props);
+    //const { title, items } = props;
+    return (
     <PreviewCollectionContainer>
         <TitleContainer>{title.toUpperCase()}</TitleContainer>
         <PreviewContainer>
@@ -19,6 +22,6 @@ const PreviewCollection = ({ title, items }) => (
             }
         </PreviewContainer>
     </PreviewCollectionContainer>
-)
+)}
 
 export default PreviewCollection;
